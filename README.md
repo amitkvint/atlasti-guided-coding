@@ -8,9 +8,9 @@ The write-up of how it came about and why the division of labor is fixed the way
 
 The skill turns Claude into a disciplined coding assistant inside a live ATLAS.ti project. The division of labor is fixed by design:
 
-- **Claude suggests** — codes verified against the live codebook at the moment of suggestion, each with the code's actual definition, an honest fit assessment (including the argument against), and the best existing fallback.
-- **The researcher decides** — use, skip, modify, or reframe. Every analytic decision stays human.
-- **Claude executes** — only approved quotations are written, at exact character offsets computed by string search, and every write is confirmed.
+- **Claude suggests** — codes verified against the live codebook at the moment of suggestion, each with the quoted passage itself, the code's actual definition and how established the code already is, a confidence label (strong, arguable, or stretch — with skip as the default under doubt), the best existing fallback, and a drafted quotation comment.
+- **The researcher decides** — use, skip, modify, or reframe. Every analytic decision stays human, and so does coverage: Claude never pre-sorts the transcript. Every passage reaches the researcher in transcript order, as a suggestion, a recommended skip, or an uncoded anchor, so nothing is left out by Claude's silence.
+- **Claude executes** — only approved quotations are written, at exact character offsets computed by string search in the same turn, each write is checked against the returned text and logged on disk, and the log is compared against the live project after every reconnect.
 
 Two working modes are supported: a walk-through (one suggestion, one decision, one write, repeat) and a section-pass (a full section's suggestion list delivered for the researcher to code themselves, followed by a compact matched/missed comparison).
 
@@ -21,10 +21,21 @@ The skill deliberately contains no study-specific knowledge. It expects two comp
 | Layer | Holds | Changes |
 |---|---|---|
 | This skill | The method: verification protocol, suggestion loop, write discipline | Rarely — only when the method itself improves |
-| Coding brief | The study: scope decisions, density norms, segmentation conventions | Every few interviews, as rulings accumulate |
+| Coding brief | The study: research question and analytic frame, scope decisions, density norms, segmentation conventions | Every few interviews, as rulings accumulate |
 | Case-status file | The data trail: per-interview progress, pending decisions, deliberately-uncoded passages with offsets | After every coded interview |
 
-The brief outranks the skill wherever they conflict. At the end of every fully coded document, the skill requires Claude to deliver an updated case-status file and an explicit brief-check verdict — the two files are the skill's outputs as much as its inputs.
+The brief outranks the skill wherever they conflict. If the brief does not state what the study asks and through what lens, Claude asks once before the first suggestion — coding without the frame produces plausible codes for the wrong study.
+
+At the end of every fully coded document, the skill requires a close-out, in order:
+
+1. **Verify** the live quotation list against Claude's on-disk log.
+2. **A contrary-reading pass** over every stretch left uncoded, looking for the reading not taken the first time — the uncoded remainder is where an assistant's first reading hides its bias.
+3. **A compact summary** ending in a fixed set of session figures (quotations, code applications, skip ratio, confidence distribution, process lapses), so sessions can be compared and reported in a methods section.
+4. **An updated case-status file**, edited in place in the study's own document.
+5. **An explicit brief-check verdict**, with a drafted next version of the brief when anything codebook-level emerged.
+6. **A skill check** — whether anything learned is study-independent and belongs in this skill instead.
+
+The companion files are the skill's outputs as much as its inputs.
 
 ## Requirements
 
@@ -42,7 +53,7 @@ Nothing in the method is specific to academic work. The same suggest–decide–
 
 ## Provenance
 
-Developed by [Amit Kvint](https://amitkvint.com) during a qualitative interview study, iterating on real coding sessions with Claude connected to a live ATLAS.ti project of ~390 codes and 50+ interview documents. Every rule in the skill exists because its absence produced a real error in a real session.
+Developed by [Amit Kvint](https://amitkvint.com) during a qualitative interview study, iterating on real coding sessions with Claude connected to a live ATLAS.ti project of ~390 codes and 50+ interview documents. Most rules in the skill exist because their absence produced a real error in a real session; the rest came from methods discussions about what makes an assistant's involvement defensible in a study.
 
 ## License
 
