@@ -1,5 +1,7 @@
 # atlasti-guided-coding
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22826822.svg)](https://doi.org/10.5281/zenodo.22826822)
+
 A Claude Skill for guided qualitative coding in ATLAS.ti through its MCP (Model Context Protocol) integration.
 
 The write-up of how it came about and why the division of labor is fixed the way it is: [I Taught Claude to Code My Interviews With Me, Not For Me](https://amitkvint.com/writing/ai-assisted-qualitative-coding-atlas-ti-claude/).
@@ -59,9 +61,9 @@ Developed by [Amit Kvint](https://amitkvint.com) during a qualitative interview 
 
 If the skill informs published work — a methods section, a course, a tool — please cite it:
 
-> Kvint, A. (2026). *atlasti-guided-coding: a Claude skill for guided qualitative coding in ATLAS.ti* (Version 1.1.0) [Computer software]. https://github.com/amitkvint/atlasti-guided-coding
+> Kvint, A. (2026). *atlasti-guided-coding: a Claude skill for guided qualitative coding in ATLAS.ti* (Version 1.1.0) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.22826822
 
-GitHub's "Cite this repository" button gives the same reference in APA and BibTeX, from [`CITATION.cff`](CITATION.cff).
+GitHub's "Cite this repository" button gives the same reference in APA and BibTeX, from [`CITATION.cff`](CITATION.cff). The DOI above always points to the latest version; each release also has its own DOI on [Zenodo](https://doi.org/10.5281/zenodo.22826822), for citing the exact version you used.
 
 ## License
 
