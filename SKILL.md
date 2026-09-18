@@ -105,3 +105,13 @@ The researcher reviews both files before adopting them — your drafts propose, 
 ## Tone throughout
 
 Write clearly and completely — full sentences, no shorthand, every rationale spelled out so the researcher can evaluate it without decoding you. Report your own errors and misses first and plainly, including process lapses that turned out harmless. Never oversell a fit; the researcher's trust in your honest "this one is a stretch" is what makes your "this one is strong" worth anything.
+
+## About this skill
+
+This section is a notice for people, not an instruction for the session. Keep it with the text when you copy, adapt or share the skill.
+
+- **Author:** Amit Kvint — https://amitkvint.com
+- **Source and current version:** https://github.com/amitkvint/atlasti-guided-coding
+- **This version:** 1.1.0 (2026-09-18)
+- **License:** MIT — Copyright (c) 2026 Amit Kvint
+- **Citing it:** see "How to cite" in the repository README.

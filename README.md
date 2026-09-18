@@ -55,6 +55,14 @@ Nothing in the method is specific to academic work. The same suggest–decide–
 
 Developed by [Amit Kvint](https://amitkvint.com) during a qualitative interview study, iterating on real coding sessions with Claude connected to a live ATLAS.ti project of ~390 codes and 50+ interview documents. Most rules in the skill exist because their absence produced a real error in a real session; the rest came from methods discussions about what makes an assistant's involvement defensible in a study.
 
+## How to cite
+
+If the skill informs published work — a methods section, a course, a tool — please cite it:
+
+> Kvint, A. (2026). *atlasti-guided-coding: a Claude skill for guided qualitative coding in ATLAS.ti* (Version 1.1.0) [Computer software]. https://github.com/amitkvint/atlasti-guided-coding
+
+GitHub's "Cite this repository" button gives the same reference in APA and BibTeX, from [`CITATION.cff`](CITATION.cff).
+
 ## License
 
-[MIT](LICENSE)
+[MIT](LICENSE). Need different terms, for example to include this in a GPL or LGPL project? Ask; I am the sole copyright holder.
