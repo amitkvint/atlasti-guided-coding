@@ -84,9 +84,14 @@ Developed by [Amit Kvint](https://amitkvint.com) during a qualitative interview 
 
 If the skill informs published work — a methods section, a course, a tool — please cite it:
 
-> Kvint, A. (2026). *atlasti-guided-coding: a Claude skill for guided qualitative coding in ATLAS.ti* (Version 1.1.0) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.22826822
+> Kvint, A. (2026). *atlasti-guided-coding: a Claude skill for guided qualitative coding in ATLAS.ti* (Version 1.2.0) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.22826822
 
 GitHub's "Cite this repository" button gives the same reference in APA and BibTeX, from [`CITATION.cff`](CITATION.cff). The DOI above always points to the latest version; each release also has its own DOI on [Zenodo](https://doi.org/10.5281/zenodo.22826822), for citing the exact version you used.
+
+| Version | DOI |
+|---|---|
+| 1.2.0 (2026-11-11) | [10.5281/zenodo.24142065](https://doi.org/10.5281/zenodo.24142065) |
+| 1.1.0 (2026-09-18) | [10.5281/zenodo.22826823](https://doi.org/10.5281/zenodo.22826823) |
 
 ## License
 

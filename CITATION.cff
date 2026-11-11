@@ -11,6 +11,16 @@ version: 1.2.0
 date-released: "2026-11-11"
 license: MIT
 doi: 10.5281/zenodo.22826822
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.22826822
+    description: "Concept DOI: always resolves to the latest version"
+  - type: doi
+    value: 10.5281/zenodo.24142065
+    description: "Version 1.2.0"
+  - type: doi
+    value: 10.5281/zenodo.22826823
+    description: "Version 1.1.0"
 repository-code: "https://github.com/amitkvint/atlasti-guided-coding"
 url: "https://amitkvint.com/writing/ai-assisted-qualitative-coding-atlas-ti-claude/"
 keywords:
