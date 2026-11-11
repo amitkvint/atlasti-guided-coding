@@ -36,18 +36,41 @@ At the end of every fully coded document, the skill requires a close-out, in ord
 4. **An updated case-status file**, edited in place in the study's own document.
 5. **An explicit brief-check verdict**, with a drafted next version of the brief when anything codebook-level emerged.
 6. **A skill check** — whether anything learned is study-independent and belongs in this skill instead.
+7. **A project backup** — a full ATLAS.ti project bundle, named by date and document, recorded in the case-status file.
 
 The companion files are the skill's outputs as much as its inputs.
+
+## What is in the repository
+
+| Path | What it is |
+|---|---|
+| `SKILL.md` | The core loop: session-start checks, suggestion format, codebook and segmentation discipline, writing mechanics |
+| `references/tool-behaviour.md` | How the ATLAS.ti MCP tools behave, and how to use the scripts |
+| `references/close-out.md` | The close-out, read at the moment it is due rather than from memory |
+| `scripts/` | Four small Python scripts (standard library only): exact span offsets with context, the session log and its check against the live project, the uncoded stretches, the session figures (per document or pooled across a study) |
+
+The scripts do the mechanical work exactly; they make no analytic decision. Where code cannot run, the skill's rules still apply and Claude does the same work by hand.
 
 ## Requirements
 
 - ATLAS.ti Desktop with an active subscription, MCP Server enabled in its settings (Settings → Model Context Protocol Server — a per-machine toggle, off by default)
-- Claude Desktop with the ATLAS.ti extension installed, started while ATLAS.ti is running
-- This skill saved to your Claude profile
+- One of:
+  - **Claude Desktop** with the ATLAS.ti extension installed, started while ATLAS.ti is running
+  - **Claude Code** connected to the same ATLAS.ti server (see below). Working in Claude Code lets the close-out edit your brief and case-status files where they already are, with no download or upload, and the helper scripts run directly.
 
 ## Installation
 
-Copy the contents of [`SKILL.md`](SKILL.md) into a new skill in your Claude profile (Settings → Capabilities → Skills), or ask Claude to create the skill from this file.
+**Claude Desktop / claude.ai:** download the repository as a ZIP and upload it as a skill in your Claude profile (Settings → Capabilities → Skills). Uploading only `SKILL.md` also works, but leaves out the reference files and scripts.
+
+**Claude Code:** clone the repository and link it into your skills folder, then connect the ATLAS.ti server. The server ships inside the Claude Desktop extension, so install that first. On macOS:
+
+```sh
+git clone https://github.com/amitkvint/atlasti-guided-coding.git
+ln -s "$PWD/atlasti-guided-coding" ~/.claude/skills/atlasti-guided-coding
+claude mcp add atlasti --scope user -- node "$HOME/Library/Application Support/Claude/Claude Extensions/local.mcpb.atlas.ti-scientific-software-development-gmbh-a-lumivero-company.atlasti/server/index.js"
+```
+
+Keep the brief and case-status files in a study folder of their own, outside any synced or shared folder if they hold participant data, and start Claude Code there.
 
 ## Beyond academic research
 
